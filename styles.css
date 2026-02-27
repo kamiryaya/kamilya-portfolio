@@ -497,3 +497,7 @@ html { scroll-behavior: smooth; }
 @media (max-width: 900px){
   .mini-metrics{ grid-template-columns: 1fr; }
 }
+
+.hero__actions a[download]::after {
+  content: " ⬇";
+}
