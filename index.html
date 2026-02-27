@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Камиля — портфолио</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- (необязательно) favicon: добавь файл favicon.ico в корень проекта -->
+  <!-- <link rel="icon" href="favicon.ico" /> -->
 </head>
 <body>
   <!-- Навигация -->
   <nav class="nav">
     <div class="container nav__inner">
       <a class="logo" href="#top">Kamilya</a>
+
       <div class="nav__links">
         <a href="#about">Обо мне</a>
+        <a href="#skills">Skills</a>
         <a href="#portfolio">Портфолио</a>
         <a href="#contact">Контакты</a>
       </div>
-    <button class="chip" id="themeToggle" type="button">🌙 Theme</button>
+
+      <button class="chip" id="themeToggle" type="button">🌙 Theme</button>
     </div>
   </nav>
 
@@ -24,23 +30,29 @@
   <header id="top" class="hero">
     <div class="container hero__grid">
       <div class="hero__text fade-in">
-        <span class="badge">Data • SQL • Python • Excel</span>
-        <h1>Привет! Я Камиля - Data Analyst</h1>
+        <span class="badge">Junior Data Analyst • SQL • Python • Excel</span>
+
+        <h1>Привет! Я Камиля — Junior Data Analyst (SQL & Python)</h1>
+
         <p class="subtitle">
-          Учусь аналитике данных и собираю портфолио проектов: SQL-запросы, отчёты, небольшие приложения и автоматизация.
+          Превращаю данные в понятные решения: анализ выручки и трендов, сегментация клиентов,
+          отчётность и рекомендации для бизнеса.
         </p>
 
         <div class="hero__actions">
-          <button id="ctaBtn" class="btn btn--primary">
-            Нажми меня
-          </button>
+          <button id="ctaBtn" class="btn btn--primary">Нажми меня</button>
           <a class="btn btn--ghost" href="#portfolio">Смотреть проекты</a>
+
+          <!-- (необязательно) если добавишь PDF в корень: CV_Kamilya.pdf -->
+          <!-- <a class="btn btn--ghost" href="CV_Kamilya.pdf" target="_blank">Скачать CV (PDF)</a> -->
         </div>
-<div class="socials">
-  <a href="https://github.com/kamiryaya" target="_blank">GitHub</a>
-  <a href="https://linkedin.com/in/kamilya-k-714781189" target="_blank">LinkedIn</a>
-  <a href="mailto:kamilya.ray@gmail.com">E-mail</a>
-</div>
+
+        <div class="socials">
+          <a href="https://github.com/kamiryaya" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/kamilya-k-714781189" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:kamilya.ray@gmail.com">E-mail</a>
+        </div>
+
         <p id="ctaResult" class="hint" aria-live="polite"></p>
       </div>
 
@@ -48,15 +60,31 @@
         <div class="card">
           <h3>Сейчас в фокусе</h3>
           <ul class="list">
-            <li>SQL: JOIN, GROUP BY, оконные функции</li>
-            <li>Python: pandas, визуализация, автоматизация</li>
+            <li>SQL: JOIN, GROUP BY, оконные функции, CTE</li>
+            <li>Python: pandas, анализ, автоматизация</li>
             <li>Excel: формулы, отчёты, качество данных</li>
           </ul>
 
           <div class="pill-row">
             <span class="pill">Алматы</span>
-            <span class="pill">Открыта к задачам</span>
-            <span class="pill">Портфолио в процессе</span>
+            <span class="pill">Open to opportunities</span>
+            <span class="pill">Deployed on Vercel</span>
+          </div>
+        </div>
+
+        <!-- мини-цифры (быстро “продают”) -->
+        <div class="mini-metrics">
+          <div class="mini-metric">
+            <div class="mini-metric__num">30+</div>
+            <div class="mini-metric__label">SQL задач</div>
+          </div>
+          <div class="mini-metric">
+            <div class="mini-metric__num">10+</div>
+            <div class="mini-metric__label">мини-практик</div>
+          </div>
+          <div class="mini-metric">
+            <div class="mini-metric__num">1</div>
+            <div class="mini-metric__label">live-портфолио</div>
           </div>
         </div>
       </div>
@@ -67,56 +95,57 @@
     <div class="blob blob--2"></div>
   </header>
 
-  <!-- About -->
   <main class="container">
+    <!-- About -->
     <section id="about" class="section reveal">
       <h2>Обо мне</h2>
       <p class="text">
-        Мне интересно превращать хаотичные данные в понятные выводы: чистка, логика, метрики, отчёты.
-        Этот сайт — первый шаг в вебе, чтобы дальше делать интерактивные проекты.
+        Мне интересно превращать хаотичные данные в ясные выводы: чистка, логика, метрики, отчёты.
+        Люблю, когда результат анализа помогает принимать решение: что улучшить, где просадка, где рост.
       </p>
 
       <div class="stats">
         <div class="stat card">
           <div class="stat__num">SQL</div>
-          <div class="stat__label">Практика запросов</div>
+          <div class="stat__label">запросы + оптимальная логика</div>
         </div>
         <div class="stat card">
           <div class="stat__num">Python</div>
-          <div class="stat__label">Pandas + анализ</div>
+          <div class="stat__label">pandas + базовая визуализация</div>
         </div>
         <div class="stat card">
           <div class="stat__num">Excel</div>
-          <div class="stat__label">Отчёты и формулы</div>
+          <div class="stat__label">формулы + отчёты</div>
         </div>
       </div>
     </section>
-    
-   <section class="section reveal" id="skills">
-  <h2>Technical Skills</h2>
 
-  <div class="skills-grid">
-    <div class="card skill">
-      <h3>SQL</h3>
-      <p>JOIN, GROUP BY, HAVING, subqueries, window functions, CTE</p>
-    </div>
+    <!-- Skills (cards) -->
+    <section class="section reveal" id="skills">
+      <h2>Technical Skills</h2>
 
-    <div class="card skill">
-      <h3>Python</h3>
-      <p>pandas, data cleaning, basic visualization, automation</p>
-    </div>
+      <div class="skills-grid">
+        <div class="card skill">
+          <h3>SQL</h3>
+          <p>JOIN, GROUP BY, HAVING, subqueries, window functions, CTE</p>
+        </div>
 
-    <div class="card skill">
-      <h3>Excel</h3>
-      <p>advanced formulas, reporting, data validation, tidy layouts</p>
-    </div>
+        <div class="card skill">
+          <h3>Python</h3>
+          <p>pandas, data cleaning, basic visualization, automation</p>
+        </div>
 
-    <div class="card skill">
-      <h3>Tools</h3>
-      <p>GitHub, VS Code, Vercel, (soon: Power Query / Power BI)</p>
-    </div>
-  </div>
-</section>
+        <div class="card skill">
+          <h3>Excel</h3>
+          <p>advanced formulas, reporting, data validation, tidy layouts</p>
+        </div>
+
+        <div class="card skill">
+          <h3>Tools</h3>
+          <p>GitHub, VS Code, Vercel (soon: Power Query / Power BI)</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="section reveal">
@@ -133,7 +162,7 @@
       <div class="grid">
         <article class="proj card" data-tags="sql">
           <h3>SQL: клиенты без заказов</h3>
-          <p>Запрос с LEFT JOIN + фильтрация NULL, чтобы найти клиентов без покупок.</p>
+          <p>LEFT JOIN + фильтрация NULL, чтобы найти клиентов без покупок.</p>
           <pre class="code"><code>SELECT u.id
 FROM users u
 LEFT JOIN orders o ON o.user_id = u.id
@@ -151,8 +180,8 @@ GROUP BY status;</code></pre>
         </article>
 
         <article class="proj card" data-tags="python">
-          <h3>Python: чистка данных</h3>
-          <p>Пример: чтение CSV, обработка пропусков, базовая аналитика pandas.</p>
+          <h3>Python: clean & prep</h3>
+          <p>Чтение CSV, обработка пропусков, приведение типов.</p>
           <pre class="code"><code>import pandas as pd
 df = pd.read_csv("data.csv")
 df["amount"] = df["amount"].fillna(0)</code></pre>
@@ -165,28 +194,44 @@ df["amount"] = df["amount"].fillna(0)</code></pre>
           <pre class="code"><code>=XLOOKUP(A2, Справочник[Старое], Справочник[Новое], A2)</code></pre>
           <span class="tag">Excel</span>
         </article>
-        
-<article class="proj card" data-tags="sql">
-  <h3>Revenue Analysis (SQL)</h3>
-  <p>
-    Проанализировала выручку по регионам, выявила снижение в восточном сегменте.
-    Использовала GROUP BY, JOIN и агрегатные функции.
-  </p>
-  <ul>
-    <li>• Снижение revenue: -12%</li>
-    <li>• Основной фактор: рост конкуренции</li>
-    <li>• Рекомендация: маркетинговая кампания</li>
-  </ul>
-  <span class="tag">SQL</span>
-</article>
-        
+
+        <!-- Case study 1 -->
+        <article class="proj card" data-tags="sql">
+          <h3>Case Study: Revenue Analysis (SQL)</h3>
+          <p>
+            Анализ выручки по регионам. Выявлена просадка в восточном регионе и сформированы рекомендации.
+          </p>
+          <ul class="bullets">
+            <li>Выявлено снижение revenue на <b>12%</b> в восточном регионе</li>
+            <li>Фактор: усиление конкуренции + изменение поведения клиентов</li>
+            <li>Рекомендация: корректировка маркетинга и коммуникаций + контроль метрик</li>
+          </ul>
+          <span class="tag">SQL</span>
+        </article>
+
+        <!-- Case study 2 -->
+        <article class="proj card" data-tags="sql,python">
+          <h3>Case Study: Customer Retention</h3>
+          <p>
+            Анализ удержания: где “отваливаются” клиенты и какие сегменты требуют работы.
+          </p>
+          <ul class="bullets">
+            <li>Построение cohort-логики и контроль повторных покупок</li>
+            <li>Сегментация клиентов по активности и частоте заказов</li>
+            <li>Рекомендация: retention-кампания и A/B-проверка гипотез</li>
+          </ul>
+          <span class="tag">SQL + Python</span>
+        </article>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section reveal">
       <h2>Связаться со мной</h2>
-      <p class="text">Форма работает локально (без отправки на сервер): она проверит данные и покажет “успех”.</p>
+      <p class="text">
+        Форма пока работает локально (валидация + сообщение об успехе).
+        Если захочешь — подключим реальную отправку на email (Formspree) без сервера.
+      </p>
 
       <form id="contactForm" class="card form" novalidate>
         <div class="form__row">
@@ -216,20 +261,15 @@ df["amount"] = df["amount"].fillna(0)</code></pre>
     </section>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Камиля. Сделано в VS Code.</p>
+      <p>
+        © <span id="year"></span> Камиля.
+        <span class="footer__sep">•</span> Built with HTML/CSS/JS
+        <span class="footer__sep">•</span> Deployed via Vercel
+        <span class="footer__sep">•</span> Source: <a href="https://github.com/kamiryaya" target="_blank" rel="noopener">GitHub</a>
+      </p>
     </footer>
   </main>
 
   <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
