@@ -358,4 +358,21 @@ h1 {
   .stats { grid-template-columns: 1fr; }
   .form__row { grid-template-columns: 1fr; }
   .nav__links { gap: 12px; font-size: 13px; }
+
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.socials a {
+  color: #78b3ff;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
 }
