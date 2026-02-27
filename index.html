@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Камиля — портфолио</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a class="logo" href="#top">Kamilya</a>
+      <div class="nav__links">
+        <a href="#about">Обо мне</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text fade-in">
+        <span class="badge">Data • SQL • Python • Excel</span>
+        <h1>Привет! Я Камиля</h1>
+        <p class="subtitle">
+          Учусь аналитике данных и собираю портфолио проектов: SQL-запросы, отчёты, небольшие приложения и автоматизация.
+        </p>
+
+        <div class="hero__actions">
+          <button id="ctaBtn" class="btn btn--primary">
+            Нажми меня
+          </button>
+          <a class="btn btn--ghost" href="#portfolio">Смотреть проекты</a>
+        </div>
+
+        <p id="ctaResult" class="hint" aria-live="polite"></p>
+      </div>
+
+      <div class="hero__card slide-up">
+        <div class="card">
+          <h3>Сейчас в фокусе</h3>
+          <ul class="list">
+            <li>SQL: JOIN, GROUP BY, оконные функции</li>
+            <li>Python: pandas, визуализация, автоматизация</li>
+            <li>Excel: формулы, отчёты, качество данных</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">Алматы</span>
+            <span class="pill">Открыта к задачам</span>
+            <span class="pill">Портфолио в процессе</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Декор (мягкая анимация) -->
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+  </header>
+
+  <!-- About -->
+  <main class="container">
+    <section id="about" class="section reveal">
+      <h2>Обо мне</h2>
+      <p class="text">
+        Мне интересно превращать хаотичные данные в понятные выводы: чистка, логика, метрики, отчёты.
+        Этот сайт — первый шаг в вебе, чтобы дальше делать интерактивные проекты.
+      </p>
+
+      <div class="stats">
+        <div class="stat card">
+          <div class="stat__num">SQL</div>
+          <div class="stat__label">Практика запросов</div>
+        </div>
+        <div class="stat card">
+          <div class="stat__num">Python</div>
+          <div class="stat__label">Pandas + анализ</div>
+        </div>
+        <div class="stat card">
+          <div class="stat__num">Excel</div>
+          <div class="stat__label">Отчёты и формулы</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section reveal">
+      <div class="section__head">
+        <h2>Портфолио</h2>
+        <div class="filters">
+          <button class="chip chip--active" data-filter="all">Все</button>
+          <button class="chip" data-filter="sql">SQL</button>
+          <button class="chip" data-filter="python">Python</button>
+          <button class="chip" data-filter="excel">Excel</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="proj card" data-tags="sql">
+          <h3>SQL: клиенты без заказов</h3>
+          <p>Запрос с LEFT JOIN + фильтрация NULL, чтобы найти клиентов без покупок.</p>
+          <pre class="code"><code>SELECT u.id
+FROM users u
+LEFT JOIN orders o ON o.user_id = u.id
+WHERE o.id IS NULL;</code></pre>
+          <span class="tag">SQL</span>
+        </article>
+
+        <article class="proj card" data-tags="sql">
+          <h3>SQL: выручка по статусам</h3>
+          <p>Группировка и суммирование выручки по статусам заказов.</p>
+          <pre class="code"><code>SELECT status, SUM(amount) AS total_amount
+FROM orders
+GROUP BY status;</code></pre>
+          <span class="tag">SQL</span>
+        </article>
+
+        <article class="proj card" data-tags="python">
+          <h3>Python: чистка данных</h3>
+          <p>Пример: чтение CSV, обработка пропусков, базовая аналитика pandas.</p>
+          <pre class="code"><code>import pandas as pd
+df = pd.read_csv("data.csv")
+df["amount"] = df["amount"].fillna(0)</code></pre>
+          <span class="tag">Python</span>
+        </article>
+
+        <article class="proj card" data-tags="excel">
+          <h3>Excel: нормализация справочников</h3>
+          <p>Приведение городов/индустрий к единому виду через справочник и формулы.</p>
+          <pre class="code"><code>=XLOOKUP(A2, Справочник[Старое], Справочник[Новое], A2)</code></pre>
+          <span class="tag">Excel</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section reveal">
+      <h2>Связаться со мной</h2>
+      <p class="text">Форма работает локально (без отправки на сервер): она проверит данные и покажет “успех”.</p>
+
+      <form id="contactForm" class="card form" novalidate>
+        <div class="form__row">
+          <label>
+            Имя
+            <input id="name" name="name" type="text" placeholder="Камиля" required minlength="2" />
+          </label>
+
+          <label>
+            Email
+            <input id="email" name="email" type="email" placeholder="name@example.com" required />
+          </label>
+        </div>
+
+        <label>
+          Сообщение
+          <textarea id="message" name="message" rows="5" placeholder="Например: хочу обсудить проект..." required minlength="10"></textarea>
+        </label>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Отправить</button>
+          <button class="btn btn--ghost" type="button" id="clearBtn">Очистить</button>
+        </div>
+
+        <p id="formStatus" class="hint" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Камиля. Сделано в VS Code.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
